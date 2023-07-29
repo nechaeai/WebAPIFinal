@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
-using MyWebApi.Models; // Replace with your actual namespace
-
+using WebAPIFinal.Models; // Replace with your actual namespace
+namespace WebAPIFinal.Data{
 public class ApplicationDbContext : DbContext
 {
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
@@ -10,4 +10,5 @@ public class ApplicationDbContext : DbContext
 
     public DbSet<TeamMember> TeamMembers { get; set; }
     // Add other DbSets for other tables here
+}
 }

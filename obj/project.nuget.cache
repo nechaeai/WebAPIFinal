@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EZWg6xnCNWKX97p9V9OdsPxW4QtcE40mUtqZ1nbum9HemPDL78MBYKyihLBxB8BFDidg5yLrTZnvy2JKoKjQ6A==",
+  "dgSpecHash": "HX8fygIozMn0PhEGotUsrANKGYdxyWKlKao/w1qNxNaFosX8PpSugf9EdIY0ZCGfh660DcE0IEwJu0Zux/ujug==",
   "success": true,
-  "projectFilePath": "/Users/alekseinecha77/Desktop/ContProgClass/MyWebApi/MyWebApi.csproj",
+  "projectFilePath": "/Users/alekseinecha77/Desktop/ContProgClass/WebAPIFinal/MyWebApi.csproj",
   "expectedPackageFiles": [
     "/Users/alekseinecha77/.nuget/packages/azure.core/1.24.0/azure.core.1.24.0.nupkg.sha512",
     "/Users/alekseinecha77/.nuget/packages/azure.identity/1.6.0/azure.identity.1.6.0.nupkg.sha512",

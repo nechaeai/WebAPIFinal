@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/alekseinecha77/Desktop/ContProgClass/MyWebApi/MyWebApi.csproj": {}
+    "/Users/alekseinecha77/Desktop/ContProgClass/WebAPIFinal/MyWebApi.csproj": {}
   },
   "projects": {
-    "/Users/alekseinecha77/Desktop/ContProgClass/MyWebApi/MyWebApi.csproj": {
+    "/Users/alekseinecha77/Desktop/ContProgClass/WebAPIFinal/MyWebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/alekseinecha77/Desktop/ContProgClass/MyWebApi/MyWebApi.csproj",
+        "projectUniqueName": "/Users/alekseinecha77/Desktop/ContProgClass/WebAPIFinal/MyWebApi.csproj",
         "projectName": "MyWebApi",
-        "projectPath": "/Users/alekseinecha77/Desktop/ContProgClass/MyWebApi/MyWebApi.csproj",
+        "projectPath": "/Users/alekseinecha77/Desktop/ContProgClass/WebAPIFinal/MyWebApi.csproj",
         "packagesPath": "/Users/alekseinecha77/.nuget/packages/",
-        "outputPath": "/Users/alekseinecha77/Desktop/ContProgClass/MyWebApi/obj/",
+        "outputPath": "/Users/alekseinecha77/Desktop/ContProgClass/WebAPIFinal/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/alekseinecha77/.nuget/NuGet/NuGet.Config"
@@ -43,7 +43,13 @@
               "target": "Package",
               "version": "[7.0.7, )"
             },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.9, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.9, )"
             },

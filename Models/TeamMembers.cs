@@ -1,5 +1,4 @@
-namespace MyWebApi.Models{
-
+namespace WebAPIFinal.Models{
 public class TeamMember
 {
     public int Id { get; set; }
