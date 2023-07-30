@@ -64,6 +64,24 @@ namespace MyWebApi.Migrations
                             FavoriteFood = "Peanut butter",
                             Name = "Zeus",
                             Owner = "Samir"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Breed = "Yorki",
+                            DOB = new DateTime(2004, 5, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FavoriteFood = "Biscuits",
+                            Name = "Moss",
+                            Owner = "Shane"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Breed = "Yorki",
+                            DOB = new DateTime(2004, 5, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FavoriteFood = "Biscuits",
+                            Name = "Moss",
+                            Owner = "Shane"
                         });
                 });
 
