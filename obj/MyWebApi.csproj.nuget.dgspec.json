@@ -1,26 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "/Users/alekseinecha77/Desktop/ContProgClass/WebAPIFinal/MyWebApi.csproj": {}
+    "C:\\Users\\ACER\\Desktop\\finalPrj\\WebAPIFinal\\MyWebApi.csproj": {}
   },
   "projects": {
-    "/Users/alekseinecha77/Desktop/ContProgClass/WebAPIFinal/MyWebApi.csproj": {
+    "C:\\Users\\ACER\\Desktop\\finalPrj\\WebAPIFinal\\MyWebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/alekseinecha77/Desktop/ContProgClass/WebAPIFinal/MyWebApi.csproj",
+        "projectUniqueName": "C:\\Users\\ACER\\Desktop\\finalPrj\\WebAPIFinal\\MyWebApi.csproj",
         "projectName": "MyWebApi",
-        "projectPath": "/Users/alekseinecha77/Desktop/ContProgClass/WebAPIFinal/MyWebApi.csproj",
-        "packagesPath": "/Users/alekseinecha77/.nuget/packages/",
-        "outputPath": "/Users/alekseinecha77/Desktop/ContProgClass/WebAPIFinal/obj/",
+        "projectPath": "C:\\Users\\ACER\\Desktop\\finalPrj\\WebAPIFinal\\MyWebApi.csproj",
+        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ACER\\Desktop\\finalPrj\\WebAPIFinal\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/alekseinecha77/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "/usr/local/share/dotnet/sdk/7.0.304/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -53,9 +59,27 @@
               "target": "Package",
               "version": "[7.0.9, )"
             },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[7.0.9, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[7.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[7.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.9, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[7.0.8, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -81,7 +105,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.304/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }
