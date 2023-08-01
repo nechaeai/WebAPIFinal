@@ -11,8 +11,8 @@ using WebAPIFinal.Data;
 namespace MyWebApi.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230730175911_DbMigration")]
-    partial class DbMigration
+    [Migration("20230801195429_FavoriteRestaurants")]
+    partial class FavoriteRestaurants
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -67,6 +67,24 @@ namespace MyWebApi.Migrations
                             FavoriteFood = "Peanut butter",
                             Name = "Zeus",
                             Owner = "Samir"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Breed = "Yorki",
+                            DOB = new DateTime(2004, 5, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FavoriteFood = "Biscuits",
+                            Name = "Moss",
+                            Owner = "Shane"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Breed = "Yorki",
+                            DOB = new DateTime(2004, 5, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FavoriteFood = "Biscuits",
+                            Name = "Moss",
+                            Owner = "Shane"
                         });
                 });
 

@@ -8,6 +8,7 @@ namespace WebAPIFinal.Data
         {
             TeamMembers = Set<TeamMember>();
             FavoritePet = Set<FavoritePet>();
+            FavoriteRestaurants = Set<FavoriteRestaurants>();
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -20,6 +21,7 @@ namespace WebAPIFinal.Data
         }
         public DbSet<TeamMember> TeamMembers { get; set; }
         public DbSet<FavoritePet> FavoritePet { get; set; }
+        public DBSet<FavoriteRestaurants> FavoriteRestaurants { get; set; }
 
     }
 }

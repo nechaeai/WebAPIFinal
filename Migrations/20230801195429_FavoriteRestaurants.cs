@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace MyWebApi.Migrations
 {
     /// <inheritdoc />
-    public partial class DbMigration : Migration
+    public partial class FavoriteRestaurants : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -52,7 +52,9 @@ namespace MyWebApi.Migrations
                 values: new object[,]
                 {
                     { 1, "British Long Hair", new DateTime(2022, 5, 7, 0, 0, 0, 0, DateTimeKind.Unspecified), "Chicken Breast", "Meow", "Nhi" },
-                    { 2, "Australian Shepherd", new DateTime(2010, 12, 18, 0, 0, 0, 0, DateTimeKind.Unspecified), "Peanut butter", "Zeus", "Samir" }
+                    { 2, "Australian Shepherd", new DateTime(2010, 12, 18, 0, 0, 0, 0, DateTimeKind.Unspecified), "Peanut butter", "Zeus", "Samir" },
+                    { 3, "Yorki", new DateTime(2004, 5, 26, 0, 0, 0, 0, DateTimeKind.Unspecified), "Biscuits", "Moss", "Shane" },
+                    { 4, "Yorki", new DateTime(2004, 5, 26, 0, 0, 0, 0, DateTimeKind.Unspecified), "Biscuits", "Moss", "Shane" }
                 });
         }
 
