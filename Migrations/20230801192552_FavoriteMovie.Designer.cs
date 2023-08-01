@@ -11,14 +11,74 @@ using WebAPIFinal.Data;
 namespace MyWebApi.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230730175911_DbMigration")]
-    partial class DbMigration
+    [Migration("20230801192552_FavoriteMovie")]
+    partial class FavoriteMovie
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.9");
+
+            modelBuilder.Entity("WebAPIFinal.Models.FavoriteMovie", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("MovieDirector")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("MovieGenre")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("MovieTitle")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("ReleaseDate")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("FavoriteMovie");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            MovieDirector = "Jon S. Baird",
+                            MovieGenre = "Biographical thriller",
+                            MovieTitle = "Tetris",
+                            ReleaseDate = new DateTime(2023, 3, 15, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 2,
+                            MovieDirector = "Michael Fimognari",
+                            MovieGenre = "Romance",
+                            MovieTitle = "To All the Boys I've Loved Before",
+                            ReleaseDate = new DateTime(2018, 8, 17, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 3,
+                            MovieDirector = "Phill Lord, Chris Miller",
+                            MovieGenre = "Action",
+                            MovieTitle = "Into the Spider-verse",
+                            ReleaseDate = new DateTime(2018, 12, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 4,
+                            MovieDirector = "Michael Fimognari",
+                            MovieGenre = "Romance",
+                            MovieTitle = "To All the Boys I've Loved Before",
+                            ReleaseDate = new DateTime(2018, 8, 17, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        });
+                });
 
             modelBuilder.Entity("WebAPIFinal.Models.FavoritePet", b =>
                 {
