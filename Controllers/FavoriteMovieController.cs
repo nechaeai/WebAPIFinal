@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using WebAPIFinal.Models; // Assuming TeamMember class is in the Models folder
+using WebAPIFinal.Models; // Assuming FavoriteMovie class is in the Models folder
 using WebAPIFinal.Data; // Assuming ApplicationDbContext class is in the Data folder
 using System.Linq;
 using System.Threading.Tasks;
@@ -21,23 +21,84 @@ namespace MyWebApi.Controllers
 
         // GET: api/FavoriteMovie
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<FavoriteMovie>>> GetFavoriteMovie(int? id)
+        public async Task<ActionResult<IEnumerable<FavoriteMovie>>> GetFavoriteMovie()
         {
-            if (id == null || id == 0)
-            {
-                return await _context.FavoriteMovie.Take(5).ToListAsync();
-            }
-            else
-            {
-                var favoriteMovie = await _context.FavoriteMovie.FindAsync(id);
+            return await _context.FavoriteMovie.ToListAsync();
+        }
 
-                if (favoriteMovie == null)
+        // GET: api/FavoriteMovie/1
+        [HttpGet("{id}")]
+        public async Task<ActionResult<FavoriteMovie>> GetFavoriteMovie(int id)
+        {
+            var favoriteMovie = await _context.FavoriteMovie.FindAsync(id);
+
+            if (favoriteMovie == null)
+            {
+                return NotFound();
+            }
+
+            return favoriteMovie;
+        }
+
+        // PUT: api/FavoriteMovie/1
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutFavoriteMovie(int id, FavoriteMovie favoriteMovie)
+        {
+            if (id != favoriteMovie.Id)
+            {
+                return BadRequest();
+            }
+
+            _context.Entry(favoriteMovie).State = EntityState.Modified;
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!FavoriteMovieExists(id))
                 {
                     return NotFound();
                 }
-
-                return new[] { favoriteMovie };
+                else
+                {
+                    throw;
+                }
             }
+
+            return NoContent();
+        }
+
+        // POST: api/FavoriteMovie
+        [HttpPost]
+        public async Task<ActionResult<FavoriteMovie>> PostFavoriteMovie(FavoriteMovie favoriteMovie)
+        {
+            _context.FavoriteMovie.Add(favoriteMovie);
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction("GetFavoriteMovie", new { id = favoriteMovie.Id }, favoriteMovie);
+        }
+
+        // DELETE: api/FavoriteMovie/1
+        [HttpDelete("{id}")]
+        public async Task<ActionResult<FavoriteMovie>> DeleteFavoriteMovie(int id)
+        {
+            var favoriteMovie = await _context.FavoriteMovie.FindAsync(id);
+            if (favoriteMovie == null)
+            {
+                return NotFound();
+            }
+
+            _context.FavoriteMovie.Remove(favoriteMovie);
+            await _context.SaveChangesAsync();
+
+            return favoriteMovie;
+        }
+
+        private bool FavoriteMovieExists(int id)
+        {
+            return _context.FavoriteMovie.Any(e => e.Id == id);
         }
     }
 }

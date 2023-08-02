@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Samir Agrawal\\Source\\Repos\\WebAPIFinal\\MyWebApi.csproj": {}
+    "C:\\Users\\Samir Agrawal\\source\\repos\\WebAPIFinal\\MyWebApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Samir Agrawal\\Source\\Repos\\WebAPIFinal\\MyWebApi.csproj": {
+    "C:\\Users\\Samir Agrawal\\source\\repos\\WebAPIFinal\\MyWebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Samir Agrawal\\Source\\Repos\\WebAPIFinal\\MyWebApi.csproj",
+        "projectUniqueName": "C:\\Users\\Samir Agrawal\\source\\repos\\WebAPIFinal\\MyWebApi.csproj",
         "projectName": "MyWebApi",
-        "projectPath": "C:\\Users\\Samir Agrawal\\Source\\Repos\\WebAPIFinal\\MyWebApi.csproj",
+        "projectPath": "C:\\Users\\Samir Agrawal\\source\\repos\\WebAPIFinal\\MyWebApi.csproj",
         "packagesPath": "C:\\Users\\Samir Agrawal\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Samir Agrawal\\Source\\Repos\\WebAPIFinal\\obj\\",
+        "outputPath": "C:\\Users\\Samir Agrawal\\source\\repos\\WebAPIFinal\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Samir Agrawal\\AppData\\Roaming\\NuGet\\NuGet.Config",

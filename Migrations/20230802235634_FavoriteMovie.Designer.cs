@@ -11,7 +11,7 @@ using WebAPIFinal.Data;
 namespace MyWebApi.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230801192552_FavoriteMovie")]
+    [Migration("20230802235634_FavoriteMovie")]
     partial class FavoriteMovie
     {
         /// <inheritdoc />
@@ -73,10 +73,10 @@ namespace MyWebApi.Migrations
                         new
                         {
                             Id = 4,
-                            MovieDirector = "Michael Fimognari",
-                            MovieGenre = "Romance",
-                            MovieTitle = "To All the Boys I've Loved Before",
-                            ReleaseDate = new DateTime(2018, 8, 17, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                            MovieDirector = "Tom Hanks",
+                            MovieGenre = "Comedy/Drama",
+                            MovieTitle = "The Terminal",
+                            ReleaseDate = new DateTime(2004, 6, 18, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
                 });
 

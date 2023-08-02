@@ -70,7 +70,7 @@ namespace MyWebApi.Migrations
                     { 1, "Jon S. Baird", "Biographical thriller", "Tetris", new DateTime(2023, 3, 15, 0, 0, 0, 0, DateTimeKind.Unspecified) },
                     { 2, "Michael Fimognari", "Romance", "To All the Boys I've Loved Before", new DateTime(2018, 8, 17, 0, 0, 0, 0, DateTimeKind.Unspecified) },
                     { 3, "Phill Lord, Chris Miller", "Action", "Into the Spider-verse", new DateTime(2018, 12, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
-                    { 4, "Michael Fimognari", "Romance", "To All the Boys I've Loved Before", new DateTime(2018, 8, 17, 0, 0, 0, 0, DateTimeKind.Unspecified) }
+                    { 4, "Tom Hanks", "Comedy/Drama", "The Terminal", new DateTime(2004, 6, 18, 0, 0, 0, 0, DateTimeKind.Unspecified) }
                 });
 
             migrationBuilder.InsertData(
