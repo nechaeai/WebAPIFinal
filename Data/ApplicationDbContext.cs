@@ -9,6 +9,8 @@ namespace WebAPIFinal.Data
             TeamMembers = Set<TeamMember>();
             FavoritePet = Set<FavoritePet>();
             FavoriteMovie = Set<FavoriteMovie>();
+            SpongeBobCharacter = Set<SpongeBobCharacter>();
+
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -31,10 +33,17 @@ namespace WebAPIFinal.Data
                 new FavoriteMovie { Id = 3, MovieTitle = "Into the Spider-verse", MovieGenre = "Action", MovieDirector = "Phill Lord, Chris Miller", ReleaseDate = new DateTime(2018, 12, 01)},
                 new FavoriteMovie { Id = 4, MovieTitle = "The Terminal", MovieGenre = "Comedy/Drama", MovieDirector = "Tom Hanks", ReleaseDate = new DateTime(2004, 06, 18)}
             );
+            modelBuilder.Entity<SpongeBobCharacter>().HasData(
+                new SpongeBobCharacter { Id = 1, Name = "Goofy Goober", Role = "Mascot", FirstAppearance = new DateTime(2004, 11, 19), VoicedBy = "Tim Blaney" },
+                new SpongeBobCharacter { Id = 3, Name = "Patrick Star", Role = "SpongeBob's best friend", FirstAppearance = new DateTime(1999, 5, 1), VoicedBy = "Bill Fagerbakke" },
+                new SpongeBobCharacter { Id = 4, Name = "Squidward Tentacles", Role = "SpongeBob's neighbor and coworker", FirstAppearance = new DateTime(1999, 5, 1), VoicedBy = "Rodger Bumpass" },
+                new SpongeBobCharacter { Id = 5, Name = "Mr. Krabs", Role = "Owner of the Krusty Krab", FirstAppearance = new DateTime(1999, 5, 1), VoicedBy = "Clancy Brown" }
+            );
         }
         public DbSet<TeamMember> TeamMembers { get; set; }
         public DbSet<FavoritePet> FavoritePet { get; set; }
         public DbSet<FavoriteMovie> FavoriteMovie { get; set; }
+        public DbSet<SpongeBobCharacter> SpongeBobCharacter { get; set; }
 
     }
 }
