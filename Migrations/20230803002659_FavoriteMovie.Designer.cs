@@ -11,7 +11,7 @@ using WebAPIFinal.Data;
 namespace MyWebApi.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230802235634_FavoriteMovie")]
+    [Migration("20230803002659_FavoriteMovie")]
     partial class FavoriteMovie
     {
         /// <inheritdoc />
