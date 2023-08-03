@@ -6,21 +6,18 @@ namespace WebAPIFinal.Data
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
-            TeamMembers = Set<TeamMember>();
-            FavoritePet = Set<FavoritePet>();
+            SpongeBobCharacter = Set<SpongeBobCharacter>();
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<FavoritePet>().HasData(
-                new FavoritePet { Id = 1, Name = "Meow", Owner = "Nhi", Breed = "British Long Hair", DOB = new DateTime(2022, 5, 7), FavoriteFood = "Chicken Breast"},
-                new FavoritePet { Id = 2, Name = "Zeus", Owner = "Samir", Breed = "Australian Shepherd", DOB = new DateTime(2010, 12, 18), FavoriteFood = "Peanut butter"},
-                new FavoritePet { Id = 3, Name = "Moss", Owner = "Shane", Breed = "Yorki", DOB = new DateTime(2004, 5, 26), FavoriteFood = "Biscuits"},
-                new FavoritePet { Id = 4, Name = "Mischka", Owner = "Aleksei", Breed = "Cat", DOB = new DateTime(2022, 3, 7), FavoriteFood = "Butterflies"},
-                new FavoritePet { Id = 5, Name = "Mock", Owner = "Vie", Breed = "Dog", DOB = new DateTime(2019, 8, 10), FavoriteFood = "Egg"}
-            );
+            modelBuilder.Entity<SpongeBobCharacter>().HasData(
+        new SpongeBobCharacter { Id = 1, Name = "Goofy Goober", Role = "Mascot", FirstAppearance = new DateTime(2004, 11, 19), VoicedBy = "Tim Blaney" },
+        new SpongeBobCharacter { Id = 3, Name = "Patrick Star", Role = "SpongeBob's best friend", FirstAppearance = new DateTime(1999, 5, 1), VoicedBy = "Bill Fagerbakke" },
+        new SpongeBobCharacter { Id = 4, Name = "Squidward Tentacles", Role = "SpongeBob's neighbor and coworker", FirstAppearance = new DateTime(1999, 5, 1), VoicedBy = "Rodger Bumpass" },
+        new SpongeBobCharacter { Id = 5, Name = "Mr. Krabs", Role = "Owner of the Krusty Krab", FirstAppearance = new DateTime(1999, 5, 1), VoicedBy = "Clancy Brown" }
+);
         }
-        public DbSet<TeamMember> TeamMembers { get; set; }
-        public DbSet<FavoritePet> FavoritePet { get; set; }
+        public DbSet<SpongeBobCharacter> SpongeBobCharacter { get; set; }
 
     }
 }
