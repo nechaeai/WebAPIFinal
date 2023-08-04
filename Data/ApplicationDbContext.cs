@@ -20,6 +20,13 @@ namespace WebAPIFinal.Data
                 new TeamMember { Id = 3, FullName = "Aleksei Nechaev", Birthdate = new DateTime(2001, 1, 7), CollegeProgram = "Information Technology", YearInProgram = "junior" },
                 new TeamMember { Id = 4, FullName = "Shane Irvine", Birthdate = new DateTime(2003, 9, 26), CollegeProgram = "Information Technology", YearInProgram = "Freshman" }
             );
+            modelBuilder.Entity<FavoriteRestaurants>().HasData(
+                new FavoriteRestaurants { Id = 1, Name = "Fuji Steak House", Favorite_Food = "volcano roll", Location = "4389 Eastgate Square Dr Cincinnati OH", Last_Visited = "2023,07,0"},
+                new FavoriteRestaurants { Id = 2, Name = "Cava", Favorite_Food = "Grain bowl with grilled chicken", Location = "13920 Old Saint Augustine Rd FL", Last_Visited = "2023, 07, 13" },
+                new FavoriteRestaurants { Id = 3, Name = "Bibibop", Favorite_Food = "Glass noodle bowl with BBQ beef", Location = "228 Calhoun st Cincinnati OH", Last_Visited = "2023, 07, 27" },
+                new FavoriteRestaurants { Id = 4, Name = "El Nopal", Favorite_Food = "Quesadilla", Location = "3218 Dixie Hwy Erlanger KY", Last_Visited = "2023, 07, 27" }
+            );
+            
             modelBuilder.Entity<FavoritePet>().HasData(
                 new FavoritePet { Id = 1, Name = "Meow", Owner = "Nhi", Breed = "British Long Hair", DOB = new DateTime(2022, 5, 7), FavoriteFood = "Chicken Breast"},
                 new FavoritePet { Id = 2, Name = "Zeus", Owner = "Samir", Breed = "Australian Shepherd", DOB = new DateTime(2010, 12, 18), FavoriteFood = "Peanut butter"},
@@ -42,6 +49,7 @@ namespace WebAPIFinal.Data
         }
         public DbSet<TeamMember> TeamMembers { get; set; }
         public DbSet<FavoritePet> FavoritePet { get; set; }
+        public DbSet<FavoriteRestaurants> FavoriteRestaurants { get; set; }
         public DbSet<FavoriteMovie> FavoriteMovie { get; set; }
         public DbSet<SpongeBobCharacter> SpongeBobCharacter { get; set; }
 
