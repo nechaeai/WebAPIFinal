@@ -1,11 +1,10 @@
-﻿namespace WebAPIFinal.Models
-{
+﻿namespace WebAPIFinal.Models{
     public class FavoriteRestaurants
     {
-        public int id { get; set; }
-        public string NameOfRestaurnt { get; set; }
-        public string FavoriteMeal { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Favorite_Food { get; set; }
         public string Location { get; set; }
-        public DateTime DayLastVisited { get; set; }
+        public string Last_Visited { get; set; }
     }
 }
