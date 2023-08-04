@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using WebAPIFinal.Models; // Assuming TeamMember class is in the Models folder
+using WebAPIFinal.Models; // Assuming FavoriteRestaurants class is in the Models folder
 using WebAPIFinal.Data; // Assuming ApplicationDbContext class is in the Data folder
 using System.Linq;
 using System.Threading.Tasks;
@@ -19,16 +19,16 @@ namespace MyWebApi.Controllers
             _context = context;
         }
 
-        // GET: api/TeamMembers
+        // GET: api/FavoriteRestaurants
         [HttpGet]
         public async Task<ActionResult<IEnumerable<FavoriteRestaurants>>> GetFavoriteRestaurants()
         {
             return await _context.FavoriteRestaurants.ToListAsync();
         }
 
-        // GET: api/TeamMember/1
+        // GET: api/FavoriteRestaurants/1
         [HttpGet("{id}")]
-        public async Task<ActionResult<IEnumerable<TeamMember>>> GetFavoriteRestaurants(int? id)
+        public async Task<ActionResult<IEnumerable<FavoriteRestaurants>>> GetFavoriteRestaurants(int? id)
         {
             if (id == null || id == 0)
             {
@@ -42,11 +42,11 @@ namespace MyWebApi.Controllers
                 return NotFound();
             }
 
-            return new TeamMember[] { favoriteRestaurant };
+            return new FavoriteRestaurants[] { favoriteRestaurant };
         }
-        // PUT: api/FavoritePet/1
+        // PUT: api/FavoriteRestaurants/1
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutYearInProgram(int id, FavoriteRestaurants favoriteRestaurant)
+        public async Task<IActionResult> PutFavoriteRestaurants(int id, FavoriteRestaurants favoriteRestaurant)
         {
             if (id != favoriteRestaurant.Id)
             {
@@ -74,7 +74,7 @@ namespace MyWebApi.Controllers
             return NoContent();
         }
 
-        // POST: api/TeamMember
+        // POST: api/FavoriteRestaurants
         [HttpPost]
         public async Task<ActionResult<FavoriteRestaurants>> PostFavoriteRestaurants(FavoriteRestaurants favoriteRestaurant)
         {
@@ -84,7 +84,7 @@ namespace MyWebApi.Controllers
             return CreatedAtAction("GetFavoriteRestaurants", new { id = favoriteRestaurant.Id }, favoriteRestaurant);
         }
 
-        // DELETE: api/FavoritePet/1
+        // DELETE: api/FavoriteRestaurants/1
         [HttpDelete("{id}")]
         public async Task<ActionResult<FavoriteRestaurants>> DeleteFavoriteRestaurants(int id)
         {
