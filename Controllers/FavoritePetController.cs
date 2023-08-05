@@ -44,7 +44,7 @@ namespace MyWebApi.Controllers
 
             return new FavoritePet[] { favoritePet };
         }
-
+        
         // PUT: api/FavoritePet/1
         [HttpPut("{id}")]
         public async Task<IActionResult> PutFavoriteFood(int id, FavoritePet favoritePet)
