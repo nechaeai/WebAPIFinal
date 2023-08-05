@@ -1,6 +1,4 @@
 .vscode
 obj
 bin
-Migrations
-myDatabase.db
 .vs
